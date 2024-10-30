@@ -1,0 +1,36 @@
+site:
+  title: Antora Demo Site
+  # the 404 page and sitemap files only get generated when the url property is set
+  #url: https://antora.gitlab.io/demo/docs-site
+  start_page: component:ROOT:index.adoc
+content:
+  sources:
+  - url: C:/Users/VUJ2KOR/Documents/dummy/demo-component-a
+    branches: HEAD
+    # setting edit_url to false disables the Edit this Page link for any page that originates from this repository
+    # the same thing can be achieved by adding empty credentials (i.e., @) in front of the domain in the URL
+    #edit_url: false
+asciidoc:
+  attributes:
+    experimental: ''
+    idprefix: ''
+    idseparator: '-'
+    page-pagination: ''
+    pdf-theme: './ui/theme.yml'
+  extensions:
+      - '@antora/lunr-extension'
+      - '@antora/pdf-extension'
+ui:
+  bundle:
+    url: C:/Users/VUJ2KOR/Documents/dummy/docs-site/ui-bundle.zip
+    snapshot: true
+  #output_dir: C:/Nexeed/Docs-output  # Set the desired output directory here
+
+runtime:
+  cache_dir: ./.cache/antora
+  log:
+    failure_level: warn
+antora:
+  extensions:
+    - require: ./file-selector.js
+    - require: ./output-config.js

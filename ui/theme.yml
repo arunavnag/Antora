@@ -1,0 +1,8 @@
+extends: default
+color:
+  base:
+    font: #333333
+  heading:
+    h1: #0055AA
+  table:
+    body_background_color: #EFEFEF

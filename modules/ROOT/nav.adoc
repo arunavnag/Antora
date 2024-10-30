@@ -1,0 +1,4 @@
+* xref:index.adoc[]
+ifeval::["{selected-files}" != ""]
+include::{selected-files}[]
+endif::[]
