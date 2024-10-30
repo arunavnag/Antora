@@ -1,0 +1,33 @@
+{
+
+    "devDependencies": {
+
+      "@antora/antora-assembler": "git@gitlab.com:antora/antora-assembler.git",
+
+      "@antora/antora-lunr-extension": "git@gitlab.com:antora/antora-lunr-extension.git",
+
+      "@antora/cli": "^3.1.9",
+
+      "@antora/site-generator-default": "^3.1.9",
+
+      "antora": "3.1.9"
+
+    },
+
+    "dependencies": {
+
+      "@antora/lunr-extension": "^1.0.0-alpha.8",
+
+      "@antora/pdf-extension": "^1.0.0-alpha.9"
+
+    },
+
+    "scripts": {
+
+      "pdf": "C:\\Ruby32-x64\\bin\\asciidoctor-pdf [your-options]"
+
+    }
+
+  }
+
+ 
