@@ -5,7 +5,7 @@ site:
   start_page: component:ROOT:index.adoc
 content:
   sources:
-  - url: C:/Users/VUJ2KOR/Documents/dummy/demo-component-a
+  - url: https://github.com/arunavnag/Antora.git
     branches: HEAD
     # setting edit_url to false disables the Edit this Page link for any page that originates from this repository
     # the same thing can be achieved by adding empty credentials (i.e., @) in front of the domain in the URL
@@ -22,9 +22,9 @@ asciidoc:
       - '@antora/pdf-extension'
 ui:
   bundle:
-    url: C:/Users/VUJ2KOR/Documents/dummy/docs-site/ui-bundle.zip
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
-  #output_dir: C:/Nexeed/Docs-output  # Set the desired output directory here
+  output_dir: /home/demo/output  # Set the desired output directory here
 
 runtime:
   cache_dir: ./.cache/antora
