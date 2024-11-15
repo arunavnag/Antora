@@ -6,7 +6,7 @@ RUN apk add --no-cache \
     nodejs \
     npm \
     git \
-    python3 \
+    python3 py3-virtualenv\
     py3-pip \
     build-base \
     openjdk17 \
@@ -19,8 +19,12 @@ RUN apk add --no-cache \
     zlib-dev \
     freetype-dev
 
-# Install Python diagram packages
-RUN pip3 install --no-cache-dir \
+# Create and activate a virtual environment
+RUN python3 -m venv /opt/venv
+RUN . /opt/venv/bin/activate
+
+# Install the required Python packages in the virtual environment
+RUN /opt/venv/bin/pip install --no-cache-dir \
     blockdiag \
     seqdiag \
     actdiag \
