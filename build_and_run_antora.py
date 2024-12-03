@@ -84,6 +84,7 @@ def main():
     
     # Run Antora build
     run_antora_build(output_dir)
+    print("output .adoc files:")
 
 if __name__ == "__main__":
     main()
