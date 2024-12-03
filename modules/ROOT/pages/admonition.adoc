@@ -37,8 +37,6 @@ IMPORTANT: A monster lives in the basement.
 
 NOTE: If you go into the basement, see if you can find Kenny's orange parka.
 
-xref:ordered-list.adoc[]
-
 
 == Complex admonition
 
