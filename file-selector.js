@@ -5,7 +5,7 @@ const path = require('path')
 
 module.exports.register = function () {
   // Handle content events to modify headers
-  this.on('content', ({content}) => {
+  this.once('content', ({content}) => {
     console.log('Content event fired for file:', content.src.path);
     
     if (content.src.extname !== '.adoc') {
