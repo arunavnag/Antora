@@ -1,4 +1,5 @@
 = Ordered Lists
+:page-head-scripts: partials$auth-script.hbs
 
 == Ordered list
 

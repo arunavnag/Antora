@@ -1,4 +1,5 @@
 = Admonition
+:page-head-scripts: partials$auth-script.hbs
 
 == Admonition styles
 

@@ -1,4 +1,5 @@
 = Unordered Lists
+:page-head-scripts: partials$auth-script.hbs
 
 == Unordered list
 

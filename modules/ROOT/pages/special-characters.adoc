@@ -1,4 +1,5 @@
 = Special Characters and Symbols
+:page-head-scripts: partials$auth-script.hbs
 :table-caption!:
 
 Special character and symbol replacement is built into Asciidoctor.

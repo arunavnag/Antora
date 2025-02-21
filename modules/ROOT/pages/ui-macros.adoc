@@ -1,4 +1,5 @@
 = User Interface Macros
+:page-head-scripts: partials$auth-script.hbs
 :example-caption!:
 
 Asciidoctor has three user interface (UI) macros:

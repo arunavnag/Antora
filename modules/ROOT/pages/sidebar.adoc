@@ -1,4 +1,5 @@
 = Sidebar
+:page-head-scripts: partials$auth-script.hbs
 
 == Sidebar block
 

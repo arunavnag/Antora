@@ -1,4 +1,6 @@
 = Inline Text Formatting
+:page-head-scripts: partials$auth-script.hbs
+
 :example-caption!:
 
 You can add the following inline styles to your content:

@@ -1,4 +1,6 @@
 = Project Documentation
+:page-head-scripts: partials$auth-script.hbs
+
 John Doe
 
 == Introduction
