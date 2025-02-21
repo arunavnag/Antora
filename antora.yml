@@ -4,7 +4,6 @@ version: 1.5.6
 start_page: admonition.adoc
 asciidoc:
   attributes:
-    source-language: asciidoc@
-    table-caption: false
+    page-head-scripts: partials$auth-script.hbs
 nav:
 - modules/ROOT/nav.adoc

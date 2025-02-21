@@ -1,0 +1,43 @@
+<script src="https://alcdn.msauth.net/browser/2.18.0/js/msal-browser.min.js"></script>
+<script>
+    // MSAL configuration
+    const msalConfig = {
+        auth: {
+            clientId: "6907a7c2-edd3-4862-8e10-4a092584d62f",
+            authority: "https://login.microsoftonline.com/0ae51e19-07c8-4e4b-bb6d-648ee58410f4",
+            redirectUri: "https://archive.bosch-nexeed.com/BCI_Dev_Guide"
+        }
+    };
+    const msalInstance = new msal.PublicClientApplication(msalConfig);
+    // Function to login and redirect
+    async function login() {
+        const originalPath = "https://archive.bosch-nexeed.com/BCI_Dev_Guide";
+        const loginRequest = {
+            scopes: ["openid"],
+            state: originalPath // Store the original path in the state parameter
+        };
+        try {
+            await msalInstance.loginRedirect(loginRequest);
+        } catch (error) {
+            console.error("Error logging in:", error);
+        }
+    }
+    // Function to handle redirection
+    async function handleRedirect() {
+        try {
+            const response = await msalInstance.handleRedirectPromise();
+            if (response) {
+                const originalPath = response.state || "/";
+                window.location.replace(originalPath);
+            }
+        } catch (error) {
+            console.error("Error handling redirect:", error);
+        }
+    }
+    // Call handleRedirect on page load
+    handleRedirect();
+    // Trigger login on page load if not already logged in
+    if (!msalInstance.getAllAccounts().length) {
+        login();
+    }
+</script>
